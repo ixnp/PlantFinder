@@ -1,0 +1,32 @@
+{
+  "name": "plantfinder",
+  "version": "0.1.0",
+  "description": "301 project plant identification app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ixnp/PlantFinder.git"
+  },
+  "keywords": [
+    "codefellows",
+    "301",
+    "301n7",
+    "plantfinder"
+  ],
+  "author": "enprocopios@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ixnp/PlantFinder/issues"
+  },
+  "homepage": "https://github.com/ixnp/PlantFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-request-proxy": "^2.0.0",
+    "pg": "^6.1.5"
+  }
+}
