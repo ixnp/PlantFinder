@@ -11,12 +11,14 @@
 	list-style:none;
 	padding:0;
 	margin:0;
+  border: Solid black .5px;
 }
 #menu li {
 	float:left;
 	position:relative;
 	line-height: 4.5em;
 	width: 10em;
+  border: Solid black .5px;
 }
 
 #menu li ul {
@@ -24,10 +26,12 @@
 	margin-top:-1em;
 	margin-left:.5em;
 	display:none;
+  border: Solid black .5px;
 }
 #menu ul li ul {
 	margin-top:-3em;
 	margin-left:7em;
+  border: Solid black .5px;
 }
 
 #menu a {
@@ -37,13 +41,16 @@
 	color:#3B3B3B;
 	text-decoration:none;
 	padding:0 10px;
+  border: Solid black .5px;
 }
 #menu a:hover {
 	background-color:#5798B4;
 	color:#fff;
+  border: Solid black .5px;
 }
 #menu ul {
 	border-top:1px solid #fff;
+  border: Solid black .5px;
 }
 #menu ul a {
 	border-right:none;
@@ -51,16 +58,20 @@
 	border-bottom:1px solid #fff;
 	border-left:1px solid #fff;
 	background:#AEC245;
+  border: Solid black .5px;
 }
 
 /* SHOW SUBMENU 1 */
 #menu li:hover ul, #menu li.over ul {
 	display:block;
+  border: Solid black .5px;
 }
 #menu li:hover ul ul, #menu li.over ul ul {
 	display:none;
+  border: Solid black .5px;
 }
 /* SHOW SUBMENU 2 */
 #menu ul li:hover ul, #menu ul li.over ul {
 	display:block;
+  border: Solid black .5px;
 }
