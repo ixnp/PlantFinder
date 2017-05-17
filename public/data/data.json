@@ -1,0 +1,9 @@
+[{
+"taxonomy": "Genus,Species,Common Name,Family,Commen Family Name, Class,Division",
+
+"physicalFeatures": "Active Growth Period,	After Harvest Regrowth Rate,Bloat,CN Ratio	,Coppice Potential",
+
+"GrowthRequirements":"Adapted to Coarse Textured Soils, Adapted To Medium Textured Soils, Adapted to Fine",
+"Reproduction" :
+  "Bloom Period, Commercial Availability, Fruit/Seed Abundance, Fruit/Seed Period Begin",
+}]
