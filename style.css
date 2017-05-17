@@ -7,10 +7,28 @@
     text-align: center;
 }
 
-
-#tfheader{
+html{
   background-color:#c3dfef;
 }
+
+button{
+  background-color:#c3dfef;
+}
+
+p{
+  background-color:#c3dfef;
+}
+
+form{
+  background-color:#c3dfef;
+}
+
+li{
+  display: block;
+  float: left;
+  width : 120px;
+}
+/*
 #tfnewsearch{
   float:right;
   padding:20px;
@@ -49,6 +67,7 @@
   background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
   background: -moz-linear-gradient(top,  #0095cc,  #00678e);
 }
+*/
 /* Fixes submit button height problem in Firefox */
 .tfbutton2::-moz-focus-inner {
   border: 0;
@@ -65,10 +84,12 @@
 }
 
 #menu, #menu ul {
-	list-style:none;
-	padding:0;
-	margin:0;
-  border: Solid black .5px;
+  display:block;
+    position:relative;
+    min-height:35px;
+    max-width:125px;
+    padding-bottom:50px;
+    text-align:center;
 }
 #menu li {
 	float:left;
