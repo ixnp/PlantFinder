@@ -4,9 +4,10 @@
 $("#first-choice").change(function() {
 
 	var $dropdown = $(this);
+console.log($dropdown);
+	$.get("data/data.json", function(data) {
 
-	$.getJSON("data/data.json", function(data) {
-
+console.log(data);
 		var key = $dropdown.val();
 		var vals = [];
 
@@ -25,8 +26,9 @@ $("#first-choice").change(function() {
           break;
 			case 'base':
 				vals = ['Please choose from above'];
+          // console.log(vals);
 		}
-    console.log(vals);
+    // console.log(vals);
 
 		var $secondChoice = $("#second-choice");
 		$secondChoice.empty();
