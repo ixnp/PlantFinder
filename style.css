@@ -28,6 +28,7 @@ li{
   float: left;
   width : 120px;
 }
+
 /*
 #tfnewsearch{
   float:right;
@@ -84,19 +85,18 @@ li{
 }
 
 #menu, #menu ul {
-  display:block;
-    position:relative;
-    min-height:35px;
-    max-width:125px;
-    padding-bottom:50px;
-    text-align:center;
+  display:grid; /* Set the navbar to fixed position */
+  text-align:center;
+  width: 90%;
 }
+
 #menu li {
-	float:left;
+	float:none;
 	position:relative;
 	line-height: 4.5em;
 	width: 10em;
   border: Solid black .5px;
+  align-content: center;
 }
 
 #menu li ul {
