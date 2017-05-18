@@ -46,7 +46,30 @@ app.get('/taxonomy',function(request,response){
 });
 
 
-
+app.get('/taxonomy',function(request,response){
+  client.query(
+    SELECT *
+     CASE WHEN
+     SELECT * FROM table WHERE columnName SIMILAR TO '[userInput]'
+    ,
+  [
+      request.body.genus
+      request.body.species
+      request.body.full_species_name
+      request.body.common_name
+      request.body.id
+      request.body.dicot_moncot_gymno
+      request.body.family
+      request.body.common_family
+      request.body.or_der
+      request.body.class
+      request.body.division
+      request.body.superdevision
+      request.body.subkingdom
+      request.body.kingdom
+  ]
+)
+})
 
 
 app.listen(PORT, function(){
