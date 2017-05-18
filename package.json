@@ -1,0 +1,24 @@
+{
+  "name": "PlantFinder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "objects.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nurbek82/PlantFinder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nurbek82/PlantFinder/issues"
+  },
+  "homepage": "https://github.com/nurbek82/PlantFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  }
+}
