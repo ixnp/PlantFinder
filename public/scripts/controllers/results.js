@@ -71,20 +71,30 @@ function PlantObj (obj) {
   this.kingdom = obj.kingdom;
 }
 
-const projectsArr = []
+const ALLplants = []
+
 
 // $('#form').submit(function loadProjects(){
 // console.log('$', $.getJSON  )
 // console.log('sdfdfa ',$('#plantData'));
-$('#plantData').submit(function(event){
-  event.preventDefault();
-  console.log('hahaha');
-  $.getJSON('http://localhost:3000/data/speciesData.json', function(data){
-    console.log('data', data  )
-  }, function(err){
-      console.error('err', err)
+// $('#plantData').submit(function(event){
+//   event.preventDefault();
+$(function(){
+  $.ajax({
+    url:'/scripts/species.json',
+    dataType:'json',
+  }).done(function(data){
+    data.forEach((function (project){
+      console.log('request done: ' + Date.now());
+      ALLplants.push(new PlantObj(project));
+    }));
+    ALLplants.forEach(function(p) {
+      $('#handleBarMenu').append(p.toHtml());
+    });
   })
-})
+  console.log ('requst started:' + Date.now())
+});
+// })
 // data.forEach(function(projectObject){
 //   projectsArr.push(new PlantObj(projectObject));
 // });
@@ -140,4 +150,3 @@ $('#plantData').submit(function(event){
 //     }
 //   )
 // };
-// fetchAll();

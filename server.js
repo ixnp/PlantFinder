@@ -24,10 +24,10 @@ app.use(express.static( './public'));
 
 //rout for retrieving html fiels for display in the browsler. 301d18 class9 part 3 23:00//
 //**need to complet rout directory for this//
-// app.get('/', function(request,responose){
-//   responose.sendFile('index.html',{root:'.'});
-// });
-//
+app.get('/', function(request,responose){
+  responose.sendFile('index.html',{root:'.'});
+});
+
 //
 // app.get('/taxonomy',function(request,response){
 //   client.query('SELECT * FROM taxonomy')
