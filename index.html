@@ -6,6 +6,9 @@
 <body>
 
 <form id="form" name='name'>
+  Common name:<br>
+  <input id="common"type="text" name="" >
+  <br><br>
   Plant name:<br>
   <input id="genus" type="text" name="genus" >
   <br>
@@ -15,9 +18,7 @@
   Full Species name:<br>
   <input id="species"type="text" name="" >
   <br><br>
-  Common name:<br>
-  <input id="common"type="text" name="" >
-  <br><br>
+
   ID:<br>
   <input id="id"type="text" name="" >
   <br><br>
@@ -55,11 +56,29 @@
 <p>THIS IS REsults area DIV</p>
 </div>
 
+<script id ="results-template" type="text/x-handlebars-template">
+     <div>{{genus}}</div>
+   <div>{{species}}</div>
+   <div>{{full_species_name}}</div>
+   <div>{{common_name}}</div>
+   <div>{{id}}</div>
+   <div>{{dicot_moncot_gymno}}</div>
+   <div>{{family}}</div>
+   <div>{{common_family}}</div>
+   <div>{{or_der}}</div>
+   <div>{{class}}</div>
+   <div>{{division}}</div>
+   <div>{{superdivision}}</div>
+   <div>{{subkingdom}}</div>
+   <div>{{kingdom}}</div>
+   <a href="" > {{location}}</a>
+   <a href="html-image-hyperlink.php" class="project-image-link"><img src="{{image}}"></a>
+   </script>
+
 <script src= "https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
 <script src="scripts/homepage.js" type="text/javascript"></script>
 <script src="scripts/objects.js" type="text/javascript"></script>
-<script src="scripts/homepage.js" type="text/javascript"></script>
 
 </body>
 </html>
