@@ -18,9 +18,8 @@ function PlantObj (obj) {
   this.kingdom = obj.kingdom;
 }
 
-var $source = $('#results-template').html();
-  // console.log($source);
-  var template = Handlebars.compile($source);
+
+
 
 
 // var allProjects = [];
@@ -59,3 +58,8 @@ $(function(){
   })
   console.log ('requst started:' + Date.now())
 });
+//
+// PlantObj.prototype.toHtml= function(){
+//   var template = Handlebars.compile($("#results-template").html());
+//   return template(this);
+// };
