@@ -18,10 +18,11 @@ function PlantObj (obj) {
   this.kingdom = obj.kingdom;
 }
 
-// var $source = $('#portfolioHandlebar').html();
-//   // console.log($source);
-//   var template = Handlebars.compile($source);
-//
+var $source = $('#results-template').html();
+  // console.log($source);
+  var template = Handlebars.compile($source);
+
+
 // var allProjects = [];
 //
 // function Project (opts) {
@@ -48,11 +49,13 @@ $(function(){
     data.forEach((function (project){
       console.log('request done: ' + Date.now());
       ALLplants.push(new PlantObj(project));
+      console.log(ALLplants);
     }));
-    // ALLplants.forEach(function(p) {
-    //   $('#handlebarSection').append(p.toHtml());
-    // });
-    // projectView.initIndexPage();
+    ALLplants.forEach(function(p) {
+      console.log(p);
+      $('#handleBarMenu').append(p.toHtml());
+
+    });
   })
   console.log ('requst started:' + Date.now())
 });
