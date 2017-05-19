@@ -47,48 +47,16 @@ app.get('/taxonomy',function(request,response){
 app.post('/taxonomy',function(request,response){
 
   client.query(
+        `SELECT * FROM common_name WHERE common_name=$1`,
+        [request.body.common_name],
+        .then(function(result){
+          response.send(result.rows);
+        })
+        .catch(function(err){
+          console.log(err);
+        })
+      });
 
-    `SELECT * FROM taxonomy WHERE
-    taxonomy (genus, species, full_species_name, id, dicot, species, family, commonfamily, order, division, superdivision, subkingdon, kingdom)
-    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $12, $13, $14 );
-
-    (genus LIKE genus) OR ( genus LIKE null)
-    AND (species LIKE species ) OR (species LIKE null)
-    AND (full_species_name LIKE full_species_name ) OR (full_species_name LIKE null)
-    AND (common_name LIKE common_name) OR (common_name LIKE null)
-    AND (id LIKE id) OR (id LIKE null)
-    AND (dicot_moncot_gymno LIKE dicot) OR (dicot_moncot_gymno LIKE null)
-    AND (family LIKE Family) OR (family LIKE null)
-    AND (common_family LIKE commonfamily) OR (common_family LIKE null)
-    AND (order LIKE order) OR (order LIKE null)
-    AND (class LIKE class) OR (class LIKE null)
-    AND (division LIKE division) OR (division LIKE null)
-    AND (superdevision LIKE superdivison) OR (superdevision LIKE null)
-    AND (subkingdom LIKE subkingdom) OR (subkingdom LIKE null)
-    AND (kingdom LIKE kingdom) OR (kingdom LIKE null)`
-    ,
-    [
-      request.body.genus,
-      request.body.species,
-      request.body.full_species_name,
-      request.body.id,
-      request.body.dicot,
-      request.body.family,
-      request.body.commonfamily,
-      request.body.order,
-      request.body.division,
-      request.body.superdivision,
-      request.body.subkingdon,
-      request.body.kingdom
-    ]
-  )
-  .then(function(result){
-    response.send(result.rows);
-  })
-  .catch(function(err){
-    console.log(err);
-  })
-});
 
 app.listen(PORT, function(){
   console.log('server up on port:' +PORT);

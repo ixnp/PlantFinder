@@ -37,11 +37,13 @@ function(callback) {
     genus: this.genus,
     species:this.species,
     full_species_name:this.full_species_name,
+    common_name:this.common_name,
     id:this.id,
-    dicot:this.dicot ,
+    dicot_moncot_gymno:this.dicot_moncot_gymno ,
     family:this.family,
-    commonfamily:this.commonfamily,
-    order:this.order,
+    common_family:this.common_family,
+    or_der:this.or_der,
+    class:this.class,
     division: this.division,
     superdivision: this.superdivision,
     subkingdom:this.subkingdom,
@@ -57,7 +59,7 @@ function(callback) {
   }
 }
 )
-.then(callback);
+// .then(callback);
 };
 
 //
