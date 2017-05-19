@@ -1,69 +1,67 @@
 'use strict';
 
 
-
+  const userInput = {};
 var userInputArr = [];
 $(document).ready (function () {
 
+
   $('#form').submit(function(event) {
     event.preventDefault()
-    let userInput = new PlantObj({
-     genus : $('#genus').val()
-     species : $('#species').val()
-     species : $('#species').val()
-     commonName : $('#common').val()
-     id : $('#id').val()
-     species : $('#species').val()
-     family : $('#family').val()
-     commonfamily : $('#commonfamily').val()
-     order : $('#order').val()
-     division : $('#division').val()
-     superdivision : $('#superdivision').val()
-     subkingdon : $('#subkingdon').val()
-     kingdom : $('#kingdom').val()
-    userInputArr.push(genus,species,commonName,id,species, family,commonfamily, order, division,superdivision, subkingdon, kingdom)
+    var genus = $('#genus').val()
+    var species = $('#species').val()
+    var full_species_name = $('#full_species_name').val()
+    var commonName = $('#common').val()
+    var id = $('#id').val()
+    var dicot = $('#dicot').val()
+    var family = $('#family').val()
+    var commonfamily = $('#commonfamily').val()
+    var order = $('#order').val()
+    var division = $('#division').val()
+    var superdivision = $('#superdivision').val()
+    var subkingdom = $('#subkingdom').val()
+    var kingdom = $('#kingdom').val()
+    userInputArr.push(genus,species, full_species_name, commonName,id,dicot, family,commonfamily, order, division,superdivision, subkingdon, kingdom)
     console.log(userInputArr.map(function (i) {
       return i || null
     }));
   });
+  getData();
+})
+//
+// // }
+//
+userInput.getData =
+function(callback) {
+  $.get('/taxonomy', {
+    genus: this.genus,
+    species:this.species,
+    full_species_name:this.full_species_name,
+    id:this.id,
+    dicot:this.dicot ,
+    family:this.family,
+    commonfamily:this.commonfamily,
+    order:this.order,
+    division: this.division,
+    superdivision: this.superdivision,
+    subkingdom:this.subkingdom,
+    kingdom:this.kingdom
   })
-})
+  // .done(function(data){
+  //   data.forEach(function(plants){
+  //     console.log('insde of 1st for each')
+  //     Allplants.push(new PlantObj(plants));
+  //     console.log(Allplants,'is Allplants');
+  //     console.log(plants);
 
-// }
-
-userInput.prototype.insertData = function(callback) {
-  $.post('/taxonomy', {
-  this.genus: genus ,
-  this.species: species ,
-  this.full_species_name: full_species_name,
-  this.id: id,
-  this.dicot: dicot
-  this.family: family,
-  this.commonfamily: commonfamily,
-  this.order: order,
-  this.division: division,
-  this.superdivision: superdivision,
-  this.subkingdon: subkingdon,
-  this.kingdom: kingdom
-}).done(function(data){
-  data.forEach((function (plants){
-    console.log('insde of 1st for each');
-    ALLplants.push(new PlantObj(plants));
-    console.log (ALLplants, ' is ALLplants');
-    console.log(plants);
-  }));
-  ALLplants.forEach(function(p) {
-    $('#handleBarMenu').append(p.toHtml());
-  });
-})
-
-const renderResults = function(object) {
-let template = Handlebars.compile($('#template').text());
-
-return template(object);
-
+  }
+}
+)
+.then(callback);
+};
 
 //
+// //
 // $(function(){
 //   $.ajax({
 //     url:'/taxonomy',
@@ -80,13 +78,13 @@ return template(object);
 //     });
 //   })
 // });
-
-// querry peramers or url, boyParser no json
-
-
-//ajax request that ties to the get request in server.js//
-//object is yet to be defind, but this will be the constructor function//
 //
+//
+//
+//
+// //ajax request that ties to the get request in server.js//
+// //object is yet to be defind, but this will be the constructor function//
+// //
 // fetchAll = function(callback){
 //   $.get('/taxonomy')
 //   .then(
