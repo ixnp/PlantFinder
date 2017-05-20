@@ -328,3 +328,10 @@ article{
 .temp{
     width: 200px;
 }
+img{
+  margin: 10px;
+}
+ol{
+margin: 10%;
+padding: 8%;
+}
