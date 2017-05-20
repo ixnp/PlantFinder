@@ -11,6 +11,7 @@ $(document).ready (function () {
     searchWord = commonName;
     matchUserInputwithData();
     images();
+    InfoObj.fetchAll();
   });
 })
 function matchUserInputwithData() {
@@ -28,7 +29,6 @@ function matchUserInputwithData() {
     console.log(p);
     $('#handleBarMenu').html(new PlantObj(p).toHtml());
     console.log('kalsdfj', p.location);
-
 
 
   });
