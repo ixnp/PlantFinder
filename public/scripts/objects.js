@@ -1,5 +1,7 @@
 var ALLplants = [];
 // constructor function
+var ALLplants = [];
+// constructor function
 function PlantObj (obj) {
   this.number = obj.number;
   this.genus = obj.genus;
