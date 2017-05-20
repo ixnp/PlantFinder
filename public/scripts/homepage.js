@@ -10,6 +10,7 @@ $(document).ready (function () {
     var commonName = $('#common').val().toLowerCase();
     searchWord = commonName;
     matchUserInputwithData();
+    images();
   });
 })
 function matchUserInputwithData() {
@@ -28,21 +29,23 @@ function matchUserInputwithData() {
     $('#handleBarMenu').html(new PlantObj(p).toHtml());
     console.log('kalsdfj', p.location);
 
+
+
   });
   if (foundMatch === false) {
     alert('SORRY,That plant is NOT in our system yet');
   }
 }
 
+
 matchedPlant.forEach(function(){
   console.log('afjod');
 });
 
-
-  matchedPlant.forEach(function(p) {
-    console.log(p);
-    $('#handleBarMenu').html(new PlantObj(p).toHtml());
-  });
-  if (foundMatch === false) {
-    alert('SORRY,That plant is NOT in our system yet');
-  }
+matchedPlant.forEach(function(p) {
+  console.log(p);
+  $('#handleBarMenu').html(new PlantObj(p).toHtml());
+});
+if (foundMatch === false) {
+  alert('SORRY,That plant is NOT in our system yet');
+}

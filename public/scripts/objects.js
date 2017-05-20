@@ -19,6 +19,7 @@ function PlantObj (obj) {
   this.subkingdom = obj.subkingdom;
   this.kingdom = obj.kingdom;
   this.location = obj.location;
+  this.image = obj.image;
 }
 PlantObj.prototype.toHtml = function () {
   var template = Handlebars.compile($('#results-template').html());
@@ -35,3 +36,10 @@ $(function(){
     }));
   })
 });
+
+images = function(){
+ALLplants.forEach(function(PlantObj){
+  $('#results-template').append(this.image.toHtml())
+  console.log('jsdaiofj',this.image);
+});
+}

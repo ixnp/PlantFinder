@@ -13,7 +13,8 @@
 		"superdevision": "spermatophyta",
 		"subkingdom": "tracheobionta",
 		"kingdom": "plantae",
-		"location": "seattle"
+		"location": "seattle",
+		"image": "public/data/rose.png"
 	},
 	{
 		"genus": "Claonia",
