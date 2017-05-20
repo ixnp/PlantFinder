@@ -16,9 +16,9 @@ function PlantObj (obj) {
   this.superdevision = obj.superdevision;
   this.subkingdom = obj.subkingdom;
   this.kingdom = obj.kingdom;
+  this.location = obj.location;
 }
 PlantObj.prototype.toHtml = function () {
-  // var $source = ;
   var template = Handlebars.compile($('#results-template').html());
   return template(this)
 }
