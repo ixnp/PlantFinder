@@ -31,6 +31,7 @@
 		"superdevision": "Spermatophyta",
 		"subkingdom": "Tracheobionta",
 		"kingdom": "Plantae"
+
 	},
 	{
 		"genus": "Abies",
@@ -46,7 +47,8 @@
 		"division": "Coniferophyta",
 		"superdevision": "spermatophyta",
 		"subkingdom": "tracheobionta",
-		"kingdom": "plantae"
+		"kingdom": "plantae",
+		"image": "public/data/silverFur.png"
 	},
 	{
 		"genus": "Claonia",
