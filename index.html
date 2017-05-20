@@ -1,293 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>PLANT FINDER</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
-  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <style type="text/css"></style>
-  </head>
-<!--if you wanna add subcategories
-  <ul>
-			<li><a href="#" title="Older projects">Older projects</a>
-				<ul>
-					<li><a href="#" title="2003 projects">2003 projects</a></li>
-					<li><a href="#" title="2004 projects">2004 projects</a></li>
-					<li><a href="#" title="2005 projects">2005 projects</a></li>
-				</ul>
-			</li>
-			<li><a href="#" title="Active projects">Active projects</a>
-				<ul>
-					<li><a href="#" title="Leaf industries">Leaf industries</a></li>
-					<li><a href="#" title="Omnicron">Omnicron</a></li>
-					<li><a href="#" title="Unkown.com">Unkown.com</a></li>
-				</ul>
-			</li>
-		</ul>
-	</li>
-	<li><a href="#" title="Contact">Contact</a></li>
-</ul>
-</div>
--->
-<!-- HTML for SEARCH BAR -->
-<section id="menu">
-<li><a href="#" title="Homepage" class="selected">Homepage</a></li>
-<li><a href="#" title="About Us" class="selected">About Us</a></li>
-<li><a href="#" title="Git Hub" class="selected">Git Hub</a></li>
-</section>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+  <meta name="description" content="Plant Finder conjured by IX!"/>
+  <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 900px)">
+<title> PLANT FINDER </title>
+</head>
+<br><br>
 
-<section>
-  <p> P L A N T &nbsp F I N D E R </p>
-</section>
-  <body>
-  <section id="form">
-<div class="form">
-  <label for="name">Genus:</label>
-  <input type="text" id="name" name="user_name">
+<div container id="menu">
+<li><a href="#" title= "Homepage" class="selected">Homepage</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Botany" title= "Botanist" class="selected">Botanist</a></li>
+<li><a href="http://www.stateuniversity.com/program/26-0301/Botany-Plant-Biology" title= "Schools" class="selected">Schools</a></li>
+<li><a href="https://www.codefellows.org/" title= "Codefellows" class="selected">Codefellows</a></li>
 </div>
-<div class="form">
-  <label for="name">Species:</label>
-  <input type="text" id="name" name="user_name">
-</div>
-<div class="form">
-  <label for="name">Full Species Name:</label>
-  <input type="text" id="name" name="user_name">
-</div>
-<div class="form">
-  <label for="name">Common Name:</label>
-  <input type="text" id="name" name="user_name">
-</div>
-<div class="form">
-  <label for="name">ID:</label>
-  <input type="text" id="name" name="user_name">
-</div>
-<div class="form">
-  <label for="name">Dicot Moncot Gymno:</label>
-  <input type="text" id="name" name="user_name">
-</div>
-<div class="form">
-  <label for="name">Family:</label>
-  <input type="text" id="name" name="user_name">
-</div>
-<div class="form">
-  <label for="name">Common Family:</label>
-  <input type="text" id="name" name="user_name">
-</div>
-<div class="form">
-  <label for="name">Order:</label>
-  <input type="text" id="name" name="user_name">
-</div>
-<div class="form">
-  <label for="name">Class:</label>
-  <input type="text" id="name" name="user_name">
-</div>
-<div class="form">
-  <label for="name">Division</label>
-  <input type="text" id="name" name="user_name">
-</div>
-<div class="form">
-  <label for="name">Superdivision:</label>
-  <input type="text" id="name" name="user_name">
-</div>
-<div class="form">
-  <label for="name">Subkingdom:</label>
-  <input type="text" id="name" name="user_name">
-</div>
-<div class="form">
-  <label for="name">Kingdom:</label>
-  <input type="text" id="name" name="user_name">
-</div>
-<div class="button">
-  <button type="submit">Submit</button>
-</div>
-</section>
 
-<!-- alternate button
-<div id="tfheader">
-  <form id="tfnewsearch" method="get" action="http://www.google.com">
-          <input type="text" id="tfq2b" class="tftextinput2" name="q" size="21" maxlength="120" value="Search our website"><input type="submit" value=">" class="tfbutton2">
-  </form>
-</div>
-</body>
+<h1>- P L A N T &nbsp F I N D E R -</h1>
+
+<body>
+<form id="form" name='name'>
+  <input type="text" name="search" placeholder="Search..">
+
+  <!--
+  <br>
+  Plant name :<br>
+  <input id="genus" type="text" name="genus" >
+  <br><br>
+  SubPlant name :<br>
+  <input id="species"type="text" name="species" >
+  <br><br>
+  Full Species name :<br>
+  <input id="species"type="text" name="" >
+  <br><br>
+  Common name :<br>
+  <input id="common"type="text" name="" >
+  <br><br>
+  ID :<br>
+  <input id="id"type="text" name="" >
+  <br><br>
+  Dicot_Moncot_gymno :<br>
+  <input id="species"type="text" name="" >
+  <br><br>
+  Family :<br>
+  <input id="family"type="text" name="" >
+  <br><br>
+  Common family :<br>
+  <input id="commonfamily"type="text" name="" >
+  <br><br>
+  Order :<br>
+  <input id="order"type="text" name="" >
+  <br><br>
+  Class :<br>
+  <input id="order"type="text" name="" >
+  <br><br>
+  Division :<br>
+  <input id="division" type="text" name="" >
+  <br><br>
+  SuperDivsion :<br>
+  <input id="superdivision"type="text" name="" >
+  <br><br>
+  SubKingdom :<br>
+  <input id="subkingdom"type="text" name="" >
+  <br><br>
+  Kingdom :<br>
+  <input id="kingdom"type="text" name="" >
+  <br><br><br>
+  -->
+  <br><br>
+  <input id="submit" type="submit" value="Submit">
 </form>
--->
+<br>
+<section id="handleBarMenu">
+<p>S H O W &nbsp R E S U L T S</p>
+</section>
 
+<footer>- C O D E &nbsp F E L L O W S &nbsp 3 0 1 &nbsp F I N A L &nbsp P R O J E C T -</footer>
 
-<!--
-    <h2 id="growth">Active Growth Period</h2>
-            <ul>
-                <li class="highlighter-rouge">Spring</li>
-                <li class="highlighter-rouge">Spring & Fall</li>
-                <li class="highlighter-rouge">Spring & Summer</li>
-                <li class="highlighter-rouge">Spring, Summer, & Fall</li>
-                <li class="highlighter-rouge">Summer</li>
-                <li class="highlighter-rouge">Summer & Fall</li>
-                <li class="highlighter-rouge">Fall</li>
-                <li class="highlighter-rouge">Fall, Winter & Spring</li>
-                <li class="highlighter-rouge">Year-Around</li>
-            </ul>
+<script id ="results-template" type="text/x-handlebars-template">
+      <div>{{genus}}</div>
+    <div>{{species}}</div>
+    <div>{{full_species_name}}</div>
+    <div>{{common_name}}</div>
+    <div>{{id}}</div>
+    <div>{{dicot_moncot_gymno}}</div>
+    <div>{{family}}</div>
+    <div>{{common_family}}</div>
+    <div>{{or_der}}</div>
+    <div>{{class}}</div>
+    <div>{{division}}</div>
+    <div>{{superdivision}}</div>
+    <div>{{subkingdom}}</div>
+    <div>{{kingdom}}</div>
+    <!-- <a href="" > {{location}}</a>
+    <a href="html-image-hyperlink.php" class="project-image-link"><img src="{{image}}"></a> -->
+    </script>
 
-            <h2 id="harvest">After Harvest Regrowth Rate</h2>
-            <ul>
-              <li class="highlighter-rouge">Slow</li>
-              <li class="highlighter-rouge">Moderate</li>
-              <li class="highlighter-rouge">Rapid</li>
-            </ul>
+<script src= "https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+<script src="scripts/homepage.js" type="text/javascript"></script>
+<script src="scripts/objects.js" type="text/javascript"></script>
+<script src="scripts/homepage.js" type="text/javascript"></script>
 
-            <h2 id="bloat">Bloat</h2>
-            <ul>
-              <li class="highlighter-rouge">None</li>
-              <li class="highlighter-rouge">Low</li>
-              <li class="highlighter-rouge">Medium</li>
-              <li class="highlighter-rouge">High</li>
-            </ul>
-
-            <h2 id="ratio">C:N Ratio</h2>
-            <ul>
-              <li class="highlighter-rouge">Low</li>
-              <li class="highlighter-rouge">Medium</li>
-              <li class="highlighter-rouge">High</li>
-            </ul>
-
-            <h2 id="potential">Coppice Potential</h2>
-            <ul>
-              <li class="highlighter-rouge">Yes</li>
-              <li class="highlighter-rouge">No</li>
-            </ul>
-
-            <h2 id="conspicuousFall">Fall Conspicuous</h2>
-            <ul>
-              <li class="highlighter-rouge">Yes</li>
-              <li class="highlighter-rouge">No</li>
-            </ul>
-
-            <h2 id="resistant">Fire Resistant</h2>
-            <ul>
-              <li class="highlighter-rouge">Yes</li>
-              <li class="highlighter-rouge">No</li>
-            </ul>
-
-            <h2 id="color">Flower Color</h2>
-            <ul>
-              <li class="highlighter-rouge">Blue</li>
-              <li class="highlighter-rouge">Brown</li>
-              <li class="highlighter-rouge">Green</li>
-              <li class="highlighter-rouge">Orange</li>
-              <li class="highlighter-rouge">Purple</li>
-              <li class="highlighter-rouge">Red</li>
-              <li class="highlighter-rouge">White</li>
-              <li class="highlighter-rouge">Yellow</li>
-            </ul>
-
-            <h2 id="conspicuousFlower">Flower Conspicuous</h2>
-            <ul>
-              <li class="highlighter-rouge">Yes</ul>
-              <li class="highlighter-rouge">No</ul>
-                </ul>
-
-                <h2 id="colorFoliage">Foliage Color</h2>
-                <ul>
-                  <li class="highlighter-rouge">Dark Green</li>
-                  <li class="highlighter-rouge">Green</li>
-                  <li class="highlighter-rouge">Gray-Green</li>
-                  <li class="highlighter-rouge">Red</li>
-                  <li class="highlighter-rouge">White-Gray</li>
-                  <li class="highlighter-rouge">Yellow-Green</li>
-                </ul>
-
-                <h2 id="porositySummer">Foliage Porosity Summer</h2>
-                <ul>
-                  <li class="highlighter-rouge">Porous</li>
-                  <li class="highlighter-rouge">Moderate</li>
-                  <li class="highlighter-rouge">Dense</li>
-                </ul>
-
-                <h2 id="porosityWinter">Foliage Porosity Winter</h2>
-                <ul>
-                  <li class="highlighter-rouge">Porous</li>
-                  <li class="highlighter-rouge">Moderate</li>
-                  <li class="highlighter-rouge">Dense</li>
-                </ul>
-
-                <h2 id="texture">Foliage Texture</h2>
-                <ul>
-                  <li class="highlighter-rouge">Fine</li>
-                  <li class="highlighter-rouge">Medium</li>
-                  <li class="highlighter-rouge">Coarse</li>
-                </ul>
-
-                <h2 id="fruitSeedColor">Fruit / Seed Color</h2>
-                <ul>
-                  <li class="highlighter-rouge">Black</li>
-                  <li class="highlighter-rouge">Blue</li>
-                  <li class="highlighter-rouge">Brown</li>
-                  <li class="highlighter-rouge">Green</li>
-                  <li class="highlighter-rouge">Orange</li>
-                  <li class="highlighter-rouge">Purple</li>
-                  <li class="highlighter-rouge">Red</li>
-                  <li class="highlighter-rouge">White</li>
-                  <li class="highlighter-rouge">Yellow</li>
-                </ul>
-
-                <h2 id="fruitSeedConspicuous">Fruit / Seed Conspicuous</h2>
-                <ul>
-                  <li class="highlighter-rouge">Yes</li>
-                  <li class="highlighter-rouge">No</li>
-                </ul>
-
-                <h2 id="growthForm">Growth Form</h2>
-                <ul>
-                  <li><code class="highlighter-rouge">Bunch</code> : Plant development by intravaginal tillering at or near the soil surface without production of rhizomes or stolons.</li>
-                  <li><code class="highlighter-rouge">Colonizing</code> : A plant is likely to behave as a colonizer when planted to enhance soil stabilization.</li>
-                  <li><code class="highlighter-rouge">Multiple Stems</code> : Plant development by producing two or more stems. Examples: roundlef dogwood (Corus rugosa) and red huckleberry (Vaccinium parvifolium).</li>
-                  <li><code class="highlighter-rouge">Rhizomatous</code> : Plant development by the production of rhizomes which give rise to vegetative spread</li>
-                  <li><code class="highlighter-rouge">Single Crown</code> : A herbaceous plant that develops one persistent base.</li>
-                  <li><code class="highlighter-rouge">Single Steam</code> : Plant development by the production of one stem. Examples: corn (Zea mays) and American beech (Fagus grandifolia).</li>
-                  <li><code class="highlighter-rouge">Stoloniferous</code> : Plant development by the production of stolons which give rise to vegetative spread</li>
-                  <li><code class="highlighter-rouge">Thicket Forming</code> : A plant that is likely to develop thickets when plnted to stabilize foil</li>
-                </ul>
-
-                <h2 id="growthRate">Growth Rate</h2>
-                <ul>
-                  <li class="highlighter-rouge">Slow</li>
-                  <li class="highlighter-rouge">Moderate</li>
-                  <li class="highlighter-rouge">Rapid</li>
-                </ul>
-
-                <h2 id="height20">Height at 20 years, Max (feet)</h2>
-                <ul>
-                <li><code class="highlighter-rouge">Integer</code> : Maximum height (in feet) of a tree, shrub or sub-shrub, under ideal conditions, at a base age. The base age is 20 years for trees in temperate areas (>30 degrees north latitude), 10 years for trees in tropical areas (≤30 degrees north latitude), and 10 years for all shrubs and sub-shrubs. Ideal conditions are defined as soil pH = 5.0-7.8; soil salinity ≤ 4 mmhos/cm; soil depth ≥ 40 inches; effective average annual precipitation ≥ 30 inches; soil texture class = medium; no ponding; rare or no annual flooding; and high water table depth ≥ 1 foot during plant active growth period. Plants other than trees, shrubs, and sub-shrubs are left blank here.</li>
-</ul>
-
-  <h2 id="heightMature">Height, Mature (feet)</h2>
-  <ul>
-    <li><code class="highlighter-rouge">Integer</code> : Expected height (in feet) of plant at maturity. This is an estimate of the median mature height of all plants of a species or cultivar. Within a species mature height is quite variable, so this estimate is provided only to give a rough idea for planning purposes.</li>
-  </ul>
-
-  <h2 id="knownAllelopath">Known Allelopath</h2>
-    <ul>
-      <li class="highlighter-rouge">Yes</li>
-      <li class="highlighter-rouge">No</li>
-    </ul>
-
-    <h2 id="leafRetention">Leaf Retention</h2>
-    <ul>
-      <li class="highlighter-rouge">Yes</li>
-      <li class="highlighter-rouge">No</li>
-    </ul>
-
-    <h2 id="lifespan">Lifespan</h2>
-    <ul>
-      <li class="highlighter-rouge">Yes</li>
-      <li class="highlighter-rouge">No</li>
-    </ul>
-  </li>
-</ul>
--->
-
-<footer><p>C O D E &nbsp F E L L O W S</p>
-  <p>301 - &nbsp F I N A L &nbsp P R O J E C T - &nbsp 2017</p></div>
-          </footer>
-          </body>
-          </html>
+</body>
+</html>
