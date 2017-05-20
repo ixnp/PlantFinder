@@ -32,14 +32,14 @@ $(function(){
     dataType:'json',
   }).done(function(data){
     data.forEach((function (project){
-      console.log('request done: ' + Date.now());
+      // console.log('request done: ' + Date.now());
       ALLplants.push(new PlantObj(project));
-      console.log(ALLplants);
+      // console.log(ALLplants);
     }));
     // ALLplants.forEach(function(p) {
     //   console.log(p);
     //   $('#handleBarMenu').append(p.toHtml());
     // });
   })
-  console.log ('requst started:' + Date.now())
+  // console.log ('request started:' + Date.now())
 });
