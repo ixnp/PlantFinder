@@ -1,8 +1,8 @@
-
 var searchWord;
 var matchedPlant = [];
 var foundMatch = false;
 var userInputArr = [];
+
 
 $(document).ready (function () {
   $('#form').submit(function(event) {
@@ -13,36 +13,28 @@ $(document).ready (function () {
   });
 })
 function matchUserInputwithData() {
+
   matchedPlant = [];
   foundMatch = false;
   for (var i = 0; i < ALLplants.length; i++) {
     if (ALLplants[i].common_name === searchWord) {
       foundMatch = true;
-      alert('match found')
-      matchedPlant.push(searchWord);
-      alert(matchedPlant);
-      alert('size of matchedPlant :' + matchedPlant.length )
+      matchedPlant.push(ALLplants[i]);
+      alert(matchedPlant)
       break;
     }
   }
+  matchedPlant.forEach(function(p) {
+    console.log(p);
+    $('#handleBarMenu').html(new PlantObj(p).toHtml());
+  });
+
   if (foundMatch === false) {
     alert('SORRY,That plant is NOT in our system yet');
   }
 }
 
 
-  // function matchUserInputwithData() {
-  //   foundMatch = false;
-  //   for (var i = 0; i < ALLplants.length; i++) {
-  //     console.log(ALLplants[i].common_name)
-  //     if (ALLplants[i].common_name === searchWord) {
-  //       foundMatch = true;
-  //       alert('match found')
-  //       matchedPlant.push(searchWord);
-  //       alert(matchedPlant);
-  //     }
-  //     // break;
-  //   }
   //   matchedPlant = [];
   //   if (foundMatch === false) {
   //     alert('SORRY,That plant is NOT in our system yet');

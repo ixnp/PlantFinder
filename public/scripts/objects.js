@@ -17,14 +17,11 @@ function PlantObj (obj) {
   this.subkingdom = obj.subkingdom;
   this.kingdom = obj.kingdom;
 }
-// function template () {
-//
-//   var $source = $('#results-template').html();
-//   // console.log($source);
-//   var template = Handlebars.compile($source);
-//   return template(this);
-// }
-
+PlantObj.prototype.toHtml = function () {
+  // var $source = ;
+  var template = Handlebars.compile($('#results-template').html());
+  return template(this)
+}
 
 $(function(){
   $.ajax({
@@ -32,14 +29,7 @@ $(function(){
     dataType:'json',
   }).done(function(data){
     data.forEach((function (project){
-      // console.log('request done: ' + Date.now());
       ALLplants.push(new PlantObj(project));
-      // console.log(ALLplants);
     }));
-    // ALLplants.forEach(function(p) {
-    //   console.log(p);
-    //   $('#handleBarMenu').append(p.toHtml());
-    // });
   })
-  // console.log ('request started:' + Date.now())
 });
