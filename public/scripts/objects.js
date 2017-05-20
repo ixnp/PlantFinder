@@ -1,5 +1,3 @@
-'use strict';
-
 var ALLplants = [];
 // constructor function
 function PlantObj (obj) {
@@ -18,31 +16,12 @@ function PlantObj (obj) {
   this.superdevision = obj.superdevision;
   this.subkingdom = obj.subkingdom;
   this.kingdom = obj.kingdom;
+  this.location = obj.location;
 }
-
-
-
-
-
-// var allProjects = [];
-//
-// function Project (opts) {
-//   this.title = opts.title;
-//   this.language = opts.language;
-//   this.category = opts.category;
-//   this.gitHubUrl = opts.gitHubUrl;
-//   this.body = opts.body;
-//   this.publishedOn = opts.publishedOn;
-// }
-// Project.prototype.toHtml =
- PlantObj.toHtml = function () {
-  var $source = $('#results-template').html();
-  // console.log($source);
-  var template = Handlebars.compile($source);
-  // console.log(template);
-  return template(this);
-  console.log(this);
-};
+PlantObj.prototype.toHtml = function () {
+  var template = Handlebars.compile($('#results-template').html());
+  return template(this)
+}
 
 $(function(){
   $.ajax({
@@ -50,32 +29,7 @@ $(function(){
     dataType:'json',
   }).done(function(data){
     data.forEach((function (project){
-
       ALLplants.push(new PlantObj(project));
-      console.log(ALLplants);
-    }))
-    ALLplants.forEach(function(p){
-      console.log('p', p);
-      $('#results-template').append(p.toHtml());
-    })
+    }));
   })
 });
-
-//   ALLplants.forEach(function(p) {
-// // $('#results-template').append(p.toHtml());
-//     }));
-//     // ALLplants.populateFilters();
-//     });
-//   })
-
-
-
-//   ALLplants.populateFilters = function() {
-//   let template = Handlebars.compile('PlantObj');
-//   console.log('dsfsd', ALLplants);
-//   $('#results-template').text(template(PlantObj));
-//   console.log(template);
-// }
-
-
-// var plantHand =  template({genus: 'genus', species: 'species',full_species_name: 'full_species_name', common_name: 'common_name', id:'id',dicot_moncot_gymno: 'dicot_moncot_gymno',family: 'family',common_family: 'common_family',or_der: 'or_der',class: 'class',division: 'division',superdivision: 'superdivision',subkingdom: 'subkingdom', kingdom: 'kingdom'});

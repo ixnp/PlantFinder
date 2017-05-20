@@ -1,9 +1,8 @@
 [{
-		"number": "5",
 		"genus": "Abies",
 		"species": "amabilis",
 		"full_species_name": "Abies amabilis",
-		"common_name": "silver fir",
+		"common_name": "rose",
 		"id": "ABAL3",
 		"dicot_moncot_gymno": "Dicot",
 		"family": "Gymnosperm",
@@ -13,10 +12,10 @@
 		"division": "Coniferophyta",
 		"superdevision": "spermatophyta",
 		"subkingdom": "tracheobionta",
-		"kingdom": "plantae"
+		"kingdom": "plantae",
+		"location": "seattle"
 	},
 	{
-		"number": "3456",
 		"genus": "Claonia",
 		"species": "strepsilis",
 		"full_species_name": "Clania strephsilis",
@@ -33,7 +32,6 @@
 		"kingdom": "Plantae"
 	},
 	{
-		"number": "5",
 		"genus": "Abies",
 		"species": "amabilis",
 		"full_species_name": "Abies amabilis",
@@ -50,7 +48,6 @@
 		"kingdom": "plantae"
 	},
 	{
-		"number": "3456",
 		"genus": "Claonia",
 		"species": "strepsilis",
 		"full_species_name": "Clania strephsilis",
@@ -67,7 +64,6 @@
 		"kingdom": "Plantae"
 	},
 	{
-		"number": "5",
 		"genus": "Abies",
 		"species": "amabilis",
 		"full_species_name": "Abies amabilis",
