@@ -39,7 +39,7 @@ $(function(){
 
 images = function(){
 ALLplants.forEach(function(PlantObj){
-  $('#results-template').append(this.image.toHtml())
+  $('#results-template').append(this.image.toHtml());
   console.log('jsdaiofj',this.image);
 });
 }

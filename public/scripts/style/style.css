@@ -303,3 +303,28 @@ ul#navigation ul li a {
     clear:both;
     width:150px;
 }
+
+.invisible{
+  display: none;
+  margin: 0;
+  width: 0;
+}
+
+.handleBarMenu{
+width: 95%;
+display: flex;
+}
+
+article{
+  background-color: ivory;
+  border: Solid white;
+  padding-bottom: 200px;
+}
+
+#map{
+  width: 200px;
+}
+
+.temp{
+    width: 200px;
+}
