@@ -1,3 +1,5 @@
+'use strict';
+
 var ALLplants = [];
 // constructor function
 function PlantObj (obj) {
@@ -32,13 +34,15 @@ function PlantObj (obj) {
 //   this.body = opts.body;
 //   this.publishedOn = opts.publishedOn;
 // }
-// Project.prototype.toHtml = function () {
-//   var $source = $('#portfolioHandlebar').html();
-//   // console.log($source);
-//   var template = Handlebars.compile($source);
-//   // console.log(template);
-//   return template(this);
-// };
+// Project.prototype.toHtml =
+ PlantObj.toHtml = function () {
+  var $source = $('#results-template').html();
+  // console.log($source);
+  var template = Handlebars.compile($source);
+  // console.log(template);
+  return template(this);
+  console.log(this);
+};
 
 $(function(){
   $.ajax({
@@ -46,20 +50,32 @@ $(function(){
     dataType:'json',
   }).done(function(data){
     data.forEach((function (project){
-      console.log('request done: ' + Date.now());
+
       ALLplants.push(new PlantObj(project));
       console.log(ALLplants);
-    }));
-    ALLplants.forEach(function(p) {
-      console.log(p);
-      $('#handleBarMenu').append(p.toHtml());
-
-    });
+    }))
+    ALLplants.forEach(function(p){
+      console.log('p', p);
+      $('#results-template').append(p.toHtml());
+    })
   })
-  console.log ('requst started:' + Date.now())
 });
-//
-// PlantObj.prototype.toHtml= function(){
-//   var template = Handlebars.compile($("#results-template").html());
-//   return template(this);
-// };
+
+//   ALLplants.forEach(function(p) {
+// // $('#results-template').append(p.toHtml());
+//     }));
+//     // ALLplants.populateFilters();
+//     });
+//   })
+
+
+
+//   ALLplants.populateFilters = function() {
+//   let template = Handlebars.compile('PlantObj');
+//   console.log('dsfsd', ALLplants);
+//   $('#results-template').text(template(PlantObj));
+//   console.log(template);
+// }
+
+
+// var plantHand =  template({genus: 'genus', species: 'species',full_species_name: 'full_species_name', common_name: 'common_name', id:'id',dicot_moncot_gymno: 'dicot_moncot_gymno',family: 'family',common_family: 'common_family',or_der: 'or_der',class: 'class',division: 'division',superdivision: 'superdivision',subkingdom: 'subkingdom', kingdom: 'kingdom'});
